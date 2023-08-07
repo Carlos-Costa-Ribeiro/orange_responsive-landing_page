@@ -3,3 +3,196 @@
     padding: 0;
     margin: 0;
 }
+
+/*
+ Reset
+*/
+
+:root {
+    --primary-color: darkblue;
+    --second-color: whitesmoke;
+    --default-container: 120rem;
+    --default-gap: 5rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 5.5rem;
+    font-weight: 700;
+
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 2.3rem;
+}
+
+.f-dark {
+    color: var(--primary-color);
+}
+
+.f-light {
+    color: var(--second-color);
+}
+
+.gap {
+    margin-bottom: var(--default-gap);
+}
+
+.bg-dark {
+    background-image: url(/assets/img/bk-dark.svg);
+    
+}
+
+.bg-light {
+    background-image: url(/assets/img/bk-light.svg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.mainContent {
+    max-width: var(--default-container);
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+    margin: auto;
+}
+
+.sectionContent {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+ Shorthand css
+*/
+
+.menu {
+    position: fixed;
+    top: 0;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+}
+
+.menuContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+
+.menuContent ul {
+    list-style: none;
+    display: flex;
+}
+
+.menuContent li {
+    margin: 0 1rem 0 1rem;
+}
+
+.menuContent li:first-child {
+    margin: 0 1rem 0 0;
+}
+
+.menuContent li:last-child {
+    margin: 0 0 0 1rem;
+}
+
+.menuContent ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    color: white;
+    height: 10rem;
+    border-bottom: 0.5rem solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuContent ul a:hover {
+    color: #740074;
+    border-bottom: 0.5rem solid #740074;
+}
+
+.menuContent picture .logo {
+    height: 10rem;
+}
+
+.contSecFirst {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secFirstIntroText {
+    width: 40%;
+}
+
+.secFirstIntroText {
+    width: 40%;
+}
+
+.secFirstImage {
+    width: 50%;
+}
+
+.secFirstImage img {
+    width: 100%;
+}
+
+.contSecSec {
+    width: 50rem;
+    text-align: center;
+}
+
+.contThiSec {
+    height: 50rem;
+}
+
+.secThirdIntroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.secThirdCont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.secThirdElem {
+    width: 30rem;
+}
+
+.secThirdElem span, .secThirdElem h3 {
+    display: inline;
+}
+
+.secThirdElem span {
+    font-size: 7rem;
+    margin-right: 3rem;
+}
