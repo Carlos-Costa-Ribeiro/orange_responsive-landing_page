@@ -17,6 +17,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -57,7 +58,7 @@ p {
 
 .bg-dark {
     background-image: url(/assets/img/bk-dark.svg);
-    
+
 }
 
 .bg-light {
@@ -69,7 +70,7 @@ p {
 .mainContent {
     max-width: var(--default-container);
     width: 100%;
-    padding: 0 1rem 0 1rem;
+    padding: 0 3rem 0 3rem;
     margin: auto;
 }
 
@@ -87,6 +88,7 @@ p {
 
 .menu {
     position: fixed;
+    z-index: 99;
     top: 0;
     height: 10rem;
     width: 100%;
@@ -141,14 +143,18 @@ p {
     height: 10rem;
 }
 
+.mobileBar {
+    width: 5rem;
+    height: 5rem;
+    background-color: aqua;
+    cursor: pointer;
+    display: none;
+}
+
 .contSecFirst {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.secFirstIntroText {
-    width: 40%;
 }
 
 .secFirstIntroText {
@@ -164,7 +170,7 @@ p {
 }
 
 .contSecSec {
-    width: 50rem;
+    max-width: 50%;
     text-align: center;
 }
 
@@ -185,14 +191,345 @@ p {
 }
 
 .secThirdElem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
     width: 30rem;
 }
 
-.secThirdElem span, .secThirdElem h3 {
+.secThirdElem span,
+.secThirdElem h3 {
     display: inline;
 }
 
 .secThirdElem span {
     font-size: 7rem;
     margin-right: 3rem;
+}
+
+.contSecFour {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.secFouIntroText {
+    height: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.secFourthCont {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.secFourthImg img {
+    height: 20rem;
+    width: auto;
+    margin: 3rem;
+}
+
+.contFifSec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+.secFifthIntroTex {
+    max-width: 50%;
+    text-align: center;
+}
+
+.secFifthTable {
+    border: 2px solid var(--primary-color);
+}
+
+.secFifthTable table {
+    border: 1px solid var(--second-color);
+    font-size: 2rem;
+}
+
+.secFifthTable thead {
+    background-color: rgb(170, 170, 170);
+}
+
+.secFifthTable thead th {
+    padding: 2rem;
+}
+
+.secFifthTable tbody tr {
+    background-color: rgb(165, 0, 0);
+}
+
+.secFifthTable tbody tr td {
+    padding: 1rem;
+}
+
+.contSixSec {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstSixPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.secSixthIntroTex {
+    text-align: start;
+    width: 30%;
+}
+
+.secSixImg {
+    display: flex;
+    justify-content: end;
+    width: 70%;
+}
+
+.secSixthImg img {
+    height: 25rem;
+}
+
+.secondSixPart {
+    display: flex;
+    flex-direction: column;
+}
+
+.secondSixPart label {
+    display: block;
+    font-size: 2rem;
+    color: var(--second-color);
+    margin-bottom: 1rem;
+}
+
+.secondSixPart input {
+    height: 6rem;
+    width: 100%;
+    padding: 1rem;
+    border: 0.5rem solid transparent;
+    background-color: white;
+}
+
+.secondSixPart input::placeholder {
+    font-size: 2rem;
+}
+
+.firstPartForm {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.firstPartForm .formElem {
+    width: 49%;
+}
+
+.formElement {
+    margin-bottom: 2rem;
+}
+
+.secondSixPart .formElement textarea {
+    width: 100%;
+    resize: none;
+    border: 0.5rem solid transparent;
+}
+
+.secondSixPart input[type="submit"] {
+    cursor: pointer;
+    height: 6rem;
+    width: 20rem;
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border: 0.5rem solid red;
+}
+
+.secondSixPart input[type="submit"]:hover {
+    border: 0.5rem solid rgb(44, 80, 49);
+}
+
+.mainFooter {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #740074;
+}
+
+.scrolling {
+    cursor: pointer;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    height: 5rem;
+    width: 5rem;
+    border: 0.1rem solid transparent;
+    border-radius: 2.5rem;
+    background-color: pink;
+}
+
+@media (max-width: 800px) {
+    .mobileBar {
+        display: inline-block;
+    }
+    .mobileResponse {
+        display: none;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 700;
+
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .secFourthImg img {
+        height: 14rem;
+    }
+}
+
+@media (max-width: 575px) {
+    p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .contSecFirst {
+        justify-content: center;
+    }
+
+    .secFirstImage {
+        display: none;
+    }
+
+    .secFirstIntroText {
+        text-align: center;
+        width: 80%;
+    }
+
+    .secFourthImg img {
+        height: 10rem;
+        margin: 1rem;
+    }
+
+    .secSixthImg img {
+        display: none;
+    }
+
+    .secSixthIntroTex {
+        text-align: center;
+        width: 90%;
+    }
+
+    .firstSixPart {
+        justify-content: center;
+    }
+
+    .secondSixPart label {
+        font-size: 1.5rem;
+    }
+
+    .secondSixPart input {
+        height: 3rem;
+        padding: 0.5rem;
+    }
+
+    .secondSixPart input::placeholder {
+        font-size: 1rem;
+    }
+
+    .secThirdElem span {
+        display: none;
+    }
+
+    .secFifthTable table {
+        font-size: 1rem;
+    }
+
+    .secFifthTable thead th {
+        padding: 1rem;
+    }
+
+    .secFifthTable tbody tr td {
+        padding: 0.5rem;
+    }
+
+    .secondSixPart input[type="submit"] {
+        height: 4rem;
+        width: 14rem;
+        padding: 0.7rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    p {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .firstSixPart {
+        justify-content: center;
+    }
+
+    .secondSixPart label {
+        font-size: 1.5rem;
+    }
+
+    .secondSixPart input {
+        height: 3rem;
+        padding: 0.5rem;
+    }
+
+    .secondSixPart input::placeholder {
+        font-size: 1rem;
+    }
+
+    .secFourthImg img {
+        height: 7rem;
+        margin: 0.5rem;
+    }
 }
